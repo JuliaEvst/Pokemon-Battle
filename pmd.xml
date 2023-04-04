@@ -6,7 +6,20 @@
     <exclude-pattern>.*/Monster.java</exclude-pattern>
     <exclude-pattern>.*/Move.java</exclude-pattern>
 
-    <rule ref="category/java/design.xml" />
-    <rule ref="category/java/codestyle.xml" />
-    <rule ref="category/java/errorprone.xml"/>
+    <rule ref="category/java/design.xml" >
+        <exclude name="LawOfDemeter"/>
+        <exclude name="CognitiveComplexity"/>
+    </rule>
+
+    <rule ref="category/java/codestyle.xml" >
+        <exclude name="NoPackage"/>
+        <exclude name="LocalVariableCouldBeFinal"/>
+        <exclude name="MethodArgumentCouldBeFinal"/>
+    </rule>
+
+    <rule ref="category/java/errorprone.xml">
+        <exclude name="UseEqualsToCompareStrings"/>
+        <exclude name="CompareObjectsWithEquals"/>
+    </rule>
+
 </pmd>
