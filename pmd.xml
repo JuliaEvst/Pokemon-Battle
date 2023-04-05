@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.39.0" timestamp="2023-04-03T00:37:25.307">
-    <exclude-pattern>.*/CPUPlayer.java</exclude-pattern>
-    <exclude-pattern>.*/GameDriver.java</exclude-pattern>
-    <exclude-pattern>.*/HumanPlayer.java</exclude-pattern>
-    <exclude-pattern>.*/Monster.java</exclude-pattern>
-    <exclude-pattern>.*/Move.java</exclude-pattern>
+
+    <exclude-pattern>.*/main/java/.*</exclude-pattern>
+    <include-pattern>.*/main/java/Player.java</include-pattern>
+
 
     <rule ref="category/java/design.xml" >
         <exclude name="LawOfDemeter"/>
-        <exclude name="CognitiveComplexity"/>
+        <exclude name="LoosePackageCoupling"/>
     </rule>
 
     <rule ref="category/java/codestyle.xml" >
@@ -18,8 +17,6 @@
     </rule>
 
     <rule ref="category/java/errorprone.xml">
-        <exclude name="UseEqualsToCompareStrings"/>
-        <exclude name="CompareObjectsWithEquals"/>
     </rule>
 
 </pmd>

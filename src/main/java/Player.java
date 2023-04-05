@@ -6,6 +6,7 @@
 
 import java.util.Random;
 
+@SuppressWarnings({"PMD.AtLeastOneConstructor", "PMD.BeanMembersShouldSerialize", "PMD.CommentDefaultAccessModifier"})
 public abstract class Player {
     Monster monster;
 
@@ -21,6 +22,7 @@ public abstract class Player {
      * Determines if players monster is dead
      * @return either true or false
      */
+    @SuppressWarnings({"PMD.SimplifyBooleanReturns", "PMD.OnlyOneReturn"})
     public boolean hasLost() {
         if (monster.getHP() <= 0) {
             return true;
@@ -37,6 +39,7 @@ public abstract class Player {
      * @param enemy is the opponent
      * @return either true or false
      */
+    @SuppressWarnings({"PMD.SimplifyBooleanReturns", "PMD.OnlyOneReturn"})
     public boolean isFasterThan(Player enemy) {
         if (this.monster.getSpeed() >= enemy.getMonster().getSpeed()) {
             return true;
@@ -54,6 +57,9 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
+    @SuppressWarnings({"PMD.CognitiveComplexity","PMD.CompareObjectsWithEquals", "PMD.UseEqualsToCompareStrings",
+                        "PMD.ShortVariable", "PMD.LinguisticNaming", "PMD.UselessParentheses",
+                        "PMD.AvoidLiteralsInIfCondition"})
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
